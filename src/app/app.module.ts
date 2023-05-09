@@ -7,13 +7,15 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { ProductAlertsComponent } from './product-alerts/product-alerts.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TopBarComponent } from './top-bar/top-bar.component';
+import { LearndataBindingComponent } from './learndata-binding/learndata-binding.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductListComponent,
     ProductAlertsComponent,
-    TopBarComponent
+    TopBarComponent,
+    LearndataBindingComponent
   ],
   imports: [
     BrowserModule,
