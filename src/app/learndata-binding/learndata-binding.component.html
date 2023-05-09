@@ -1,1 +1,62 @@
-<p>learndata-binding works!</p>
+<h1>circle fill Animation</h1>
+<div class="circle-fill"></div>
+<h1>{{pageTitle}}</h1>
+<hr>
+<br>
+<div class="imgPath">
+    <img src="{{imagePath}}" >
+    <button class="btn btn primary" disabled="{{btnType}}">click</button>
+  
+
+
+</div>
+<br>
+<h2 class="propertyBind">{{secTitle}}</h2>
+<hr>
+<img [src]="imagePath">
+<button class="btn btn primary" [disabled]="btnType">click</button>
+<hr>
+<button class="btn btn danger" (click)="changeTitle()"> Click me here to change the Title</button>
+<br>
+<input type="text" [(ngModel)]="name" placeholder="please enter name">
+
+<h2>welcome to Two way data binding, {{name}}</h2>
+<hr>
+<button type="button" [style.color]="isSpecial ? 'red' : 'green'"></button>
+
+<div [style.color]="status=='error' ? 'red': 'green'" 
+     [style.text-align] = "'center'" 
+     [style.font-size.px]="'24'" >
+  GeeksforGeeks style binding
+</div>
+<hr>
+<h1 [class]="geeky">
+    GeeksforGeeks class binding
+</h1>
+Upper Heading's class is : "{{ g[0].className }}"
+<div class="isTrue">Setting class without binding</div>
+<div  [class.myClassBinding]="isTrue">Setting all classes with binding</div>
+<div  [class.myClassBinding]="!isTrue">Setting all classes without binding</div>
+<hr>
+<h2>Attribute Binding Example</h2> 
+<div>
+    <table>
+    <tr><td [attr.colspan]="3">three</td></tr>
+    <tr><td>1</td><td>2</td><td>3</td></tr>
+    </table>
+    </div>
+<hr>
+<h2>{{interPolation}}</h2>
+<img [src]="imagePosition">
+<h2 [style.styleClass]="applyStyle"></h2>
+<button (click)="submit()">submit</button>
+<table>
+    <tr>
+        <td [attr.colspan]="4">HiHIHIwerwer12312qewweadsfwefwr</td>
+    </tr>
+    <tr><td>1</td><td>2</td><td>3</td><td>1</td><td>2</td><td>3</td></tr>
+</table>
+<h1 [class.classBind]="trueClass">HI Class BInd</h1>
+<input type="text" [(ngModel)]="designation" placeholder="enter designation"/>
+<h3>two way data bind ,{{designation}}</h3>
+

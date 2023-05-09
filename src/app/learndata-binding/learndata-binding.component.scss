@@ -1,0 +1,31 @@
+.propertyBind {
+    color: green;
+}
+// .imgPath {
+//     width: 300px;
+//     height: 200px;
+//     background-color: #ee4040;
+// }
+
+@keyframes fill{
+    100%{
+        background-size: 100% 100%;
+
+    }
+}
+
+.circle-fill{
+    width:120px;
+    height:120px;
+    border-radius: 50%;
+    animation: fill 2s infinite steps(7);
+    -webkit-mask: linear-gradient(0deg,#000 55%,#0000 0) bottom/100% 18.18%;background: linear-gradient(#3d6461  0  0 )
+    bottom/100% 0% no-repeat #ddd;
+}
+.myClassBinding{
+    color: green;
+}
+.classBind{
+    background-color: green;
+    color: yellow;
+}

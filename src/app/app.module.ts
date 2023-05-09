@@ -8,6 +8,8 @@ import { ProductAlertsComponent } from './product-alerts/product-alerts.componen
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { LearndataBindingComponent } from './learndata-binding/learndata-binding.component';
+import { FormsModule } from '@angular/forms';
+import { from } from 'rxjs';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { LearndataBindingComponent } from './learndata-binding/learndata-binding
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
