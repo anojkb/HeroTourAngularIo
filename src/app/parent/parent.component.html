@@ -1,0 +1,26 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-5 col-md-6 col-sm-6 offset-1">
+            <h2>{{title}}</h2>
+            <div class="form-group">
+                <label>Name</label>
+                <input #name class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Mark</label>
+                <input #mark class="form-control">
+
+            </div>
+            <div class="form-group">
+                <br>
+                <button style="color: #fff;" (click)="TransferData(name.value,mark.value)" class="btn btn-primary"
+                    href="#">Submit</button>
+                <br>
+                <span>{{response}}</span>
+            </div>
+        </div>
+        <div class="col-lg-5 col-md-6 col-sm-6">
+            <app-child [namedata]="inputname" [markdata]="inputMark" [objdata]="inputObject"></app-child>
+        </div>
+    </div>
+</div>

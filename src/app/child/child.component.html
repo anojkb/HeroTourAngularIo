@@ -1,0 +1,22 @@
+<div>Child COmponent</div>
+<div>
+    <h1>name is: {{namedata}} and mark is: {{markdata}}</h1>
+    <h1>THE OBJECT VALUE::name is <b>{{objdata.name}}</b> AND mark is::<b>{{objdata.mark}}</b></h1>
+</div>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Mark
+            </th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let item of listarray">
+        <td>{{item.name}}</td>
+        <td>{{item.mark}}</td>
+    </tbody>
+</table>

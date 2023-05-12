@@ -10,6 +10,9 @@ import { TopBarComponent } from './top-bar/top-bar.component';
 import { LearndataBindingComponent } from './learndata-binding/learndata-binding.component';
 import { FormsModule } from '@angular/forms';
 import { from } from 'rxjs';
+import { LearningDataSharingComponent } from './learning-data-sharing/learning-data-sharing.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { from } from 'rxjs';
     ProductListComponent,
     ProductAlertsComponent,
     TopBarComponent,
-    LearndataBindingComponent
+    LearndataBindingComponent,
+    LearningDataSharingComponent,
+    ParentComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,

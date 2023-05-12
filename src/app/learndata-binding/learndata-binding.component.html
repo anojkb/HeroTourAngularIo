@@ -4,9 +4,9 @@
 <hr>
 <br>
 <div class="imgPath">
-    <img src="{{imagePath}}" >
+    <img src="{{imagePath}}">
     <button class="btn btn primary" disabled="{{btnType}}">click</button>
-  
+
 
 
 </div>
@@ -24,10 +24,8 @@
 <hr>
 <button type="button" [style.color]="isSpecial ? 'red' : 'green'"></button>
 
-<div [style.color]="status=='error' ? 'red': 'green'" 
-     [style.text-align] = "'center'" 
-     [style.font-size.px]="'24'" >
-  GeeksforGeeks style binding
+<div [style.color]="status=='error' ? 'red': 'green'" [style.text-align]="'center'" [style.font-size.px]="'24'">
+    GeeksforGeeks style binding
 </div>
 <hr>
 <h1 [class]="geeky">
@@ -35,28 +33,56 @@
 </h1>
 Upper Heading's class is : "{{ g[0].className }}"
 <div class="isTrue">Setting class without binding</div>
-<div  [class.myClassBinding]="isTrue">Setting all classes with binding</div>
-<div  [class.myClassBinding]="!isTrue">Setting all classes without binding</div>
+<div [class.myClassBinding]="isTrue">Setting all classes with binding</div>
+<div [class.myClassBinding]="!isTrue">Setting all classes without binding</div>
 <hr>
-<h2>Attribute Binding Example</h2> 
+<h2>Attribute Binding Example</h2>
 <div>
     <table>
-    <tr><td [attr.colspan]="3">three</td></tr>
-    <tr><td>1</td><td>2</td><td>3</td></tr>
+        <tr>
+            <td [attr.colspan]="3">three</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
     </table>
-    </div>
+</div>
 <hr>
+<!-- //interPolation -->
 <h2>{{interPolation}}</h2>
+<!-- property binding -->
 <img [src]="imagePosition">
+<!-- style binding -->
 <h2 [style.styleClass]="applyStyle"></h2>
+<!-- event binding -->
 <button (click)="submit()">submit</button>
 <table>
     <tr>
+        <!-- Attribute binding -->
         <td [attr.colspan]="4">HiHIHIwerwer12312qewweadsfwefwr</td>
     </tr>
-    <tr><td>1</td><td>2</td><td>3</td><td>1</td><td>2</td><td>3</td></tr>
+    <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+    </tr>
 </table>
+<!-- class binding -->
 <h1 [class.classBind]="trueClass">HI Class BInd</h1>
-<input type="text" [(ngModel)]="designation" placeholder="enter designation"/>
+<!-- two way binding -->
+<input type="text" [(ngModel)]="designation" placeholder="enter designation" />
 <h3>two way data bind ,{{designation}}</h3>
+<hr>
+<h1>
+    <span style="color:red;font-size: large;">I am Teacher Component behaving as parent :)</span>
+</h1>
+<h2>{{principle}} controls {{teachers.length}} teachers</h2>
 
+<app-learning-data-sharing *ngFor="let teacher of teachers" [teacher]="teacher" [principle]="principle">
+
+</app-learning-data-sharing>
